@@ -98,7 +98,9 @@ public class BookDao{
 			}
 			x++;
 			sql = String.format(
-					"insert into 書籍 values (%s,%s,%s,%s)",x, book.getBookName(),book.getPublisher(),book.getPageNumber());
+					"insert into 書籍 values (%s,'%s','%s',%s)",x, book.getBookName(),book.getPublisher(),book.getPageNumber());
+			
+			System.out.println(sql);
 			try {
 				con.createStatement().executeUpdate(sql);
 			} catch (SQLException e) {
