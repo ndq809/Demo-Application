@@ -1,0 +1,33 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="default" extends="struts-default">
+
+		<action name="" class="controller.chucnang.BookAction"
+			method="showListBook">
+			<result name="list-book-page">/listbook.jsp</result>
+		</action>
+		
+		<action name="show-list-book" class="controller.chucnang.BookAction"
+			method="showListBook">
+			<result name="list-book-page">/listbook.jsp</result>
+		</action>
+		
+		<action name="show-list-impression" class="controller.chucnang.BookAction"
+			method="showListImpression">
+			<result name="list-impression-page">/listImpression.jsp</result>
+		</action>
+		
+		<action name="add-book" class="controller.chucnang.BookAction"
+			method="addBook">
+			<result name="trang-chu" type="redirect">show-list-book
+			</result>
+		</action>
+
+	</package>
+
+
+
+</struts>
